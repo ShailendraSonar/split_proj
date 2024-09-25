@@ -1,0 +1,14 @@
+
+html:not(.hydrated) body {
+    display: block;  
+}
+.landing {
+    display: none; /* or visibility: hidden; */
+}
+IonContent {
+    background-color: lightgray; /* Temporary background color for visibility */
+  }
+  
+  h1 {
+    color: black; /* Ensure text is visible */
+  }

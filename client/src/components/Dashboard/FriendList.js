@@ -4,14 +4,18 @@ import { connect } from "react-redux";
 const FriendList = props => {
   return (
     <ul>
-      {/* {console.log(props.user.friends[5])} */}
-
-      {props.user.friends.map(value =>  <li className="friendlist">
-        <i class="fas fa-user" />
+  {/* Check if props.user.friends exists and has items */}
+  {props.user.friends && props.user.friends.length > 0 ? (
+    props.user.friends.map((value, index) => (
+      <li key={index} className="friendlist">
+        <i className="fas fa-user" />
         <span>{value}</span>
-      </li>)}
-      
-    </ul>
+      </li>
+    ))
+  ) : (
+    <li>No friends available</li>
+  )}
+</ul>
   );
 };
 
